@@ -14,6 +14,18 @@ public class Libretto {
 		this.Voti.add(v);
 	}
 	
+	public Libretto votiUguali(int punteggio) {
+		
+		Libretto Risultato = new Libretto();
+		
+		for(Voto v : Voti)
+			if(v.getVoto() == punteggio)
+				Risultato.add(v);
+		
+		return Risultato;
+		
+	}
+	
 	public String toString() {
 		
 		String s = "";
